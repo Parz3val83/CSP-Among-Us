@@ -11,7 +11,11 @@ def square_select():  # add turtle input
     for tile in range(mode):
         sequence = random.choice(rand_list)
         computer.append(sequence)
-        #blink turtle
+    for tile in computer: ### use nested for loop with click def
+      time.sleep(0.5)
+      tile.color('blue')
+      time.sleep(0.5)
+      tile.color('black')
     return computer
 
 print(square_select())
