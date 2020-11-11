@@ -1,4 +1,4 @@
-
+import time
 import random as random
 
 #add if block
