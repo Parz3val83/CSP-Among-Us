@@ -80,56 +80,66 @@ bttn9.goto (posi,neg)
 
 rand_list = [bttn1, bttn2, bttn3, bttn4, bttn5, bttn6, bttn7, bttn8, bttn9]
 
+#add if block
+mode = int(input('Enter mode: '))# user input for difficulty
+computer = []
+clckd = []
+
+#----Definitions----
 def one(x ,y):
   bttn1.color("blue")
   time.sleep(0.5)
   bttn1.color("black")
+  clckd.append(bttn1)
 
 def two(x ,y):
   bttn2.color("blue")
   time.sleep(0.5)
   bttn2.color("black")
+  clckd.append(bttn2)
 
 def three(x ,y):
   bttn3.color("blue")
   time.sleep(0.5)
   bttn3.color("black")
+  clckd.append(bttn3)
 
 def four(x ,y):
   bttn4.color("blue")
   time.sleep(0.5)
   bttn4.color("black")
+  clckd.append(bttn4)
 
 def five(x ,y):
   bttn5.color("blue")
   time.sleep(0.5)
   bttn5.color("black")
+  clckd.append(bttn5)
 
 def six(x ,y):
   bttn6.color("blue")
   time.sleep(0.5)
   bttn6.color("black")
+  clckd.append(bttn6)
 
 def seven(x ,y):
   bttn7.color("blue")
   time.sleep(0.5)
   bttn7.color("black")
+  clckd.append(bttn7)
 
 def eight(x ,y):
   bttn8.color("blue")
   time.sleep(0.5)
   bttn8.color("black")
+  clckd.append(bttn8)
 
 def nine(x ,y):
   bttn9.color("blue")
   time.sleep(0.5)
   bttn9.color("black")
+  clckd.append(bttn9)
 
-#add if block
-mode = int(input('Enter mode: '))# user input for difficulty
-computer = []
-
-#----Definitions----
 def square_select():  # add turtle input
     rand_list = [bttn1, bttn2, bttn3, bttn4, bttn5, bttn6, bttn7, bttn8, bttn9]
     for tile in range(mode):
@@ -145,6 +155,8 @@ def square_select():  # add turtle input
 #----Execute The Code----
 print(square_select())
 
+
+#----Onclicks----
 bttn1.onclick(one)
 bttn2.onclick(two)
 bttn3.onclick(three)
@@ -154,6 +166,16 @@ bttn6.onclick(six)
 bttn7.onclick(seven)
 bttn8.onclick(eight)
 bttn9.onclick(nine)
+
+done = trtl.Turtle()
+done.shape("circle")
+done.penup()
+done.goto(200,0)
+def printclckd():
+  print(clckd) 
+
+done.onclick(printclckd)
+
 
 wn = trtl.Screen()
 wn.mainloop() 
