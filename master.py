@@ -90,7 +90,7 @@ bttn9.goto (posi,neg)
 rand_list = [bttn1, bttn2, bttn3, bttn4, bttn5, bttn6, bttn7, bttn8, bttn9]
 
 #add if block
-mode = int(input('Enter mode: '))# user input for difficulty
+mode = int(input('Enter numerical value for difficulty. Please Note, higher numbers are harder: '))# user input for difficulty
 computer = []
 clckd = []
 
@@ -176,50 +176,93 @@ bttn7.onclick(seven)
 bttn8.onclick(eight)
 bttn9.onclick(nine)
 
-writer= trtl.Turtle()
-writer.penup()
-writer.goto(-80,-200)
-writer.pendown()
-writer.write("Done Button -->")
+
 done = trtl.Turtle()
+done.hideturtle()
 done.shape("circle")
 done.penup()
 done.goto(0,-200)
 done.pendown()
+done.showturtle()
+
+writer= trtl.Turtle()
+writer.hideturtle()
+writer.penup()
+writer.goto(-85,-200)
+writer.pendown()
+writer.write("Done Button -->")
+
 
 def printclckd(x, y):
   time.sleep(0.25)
   done.color('blue')
   time.sleep(0.25)
   done.color('black')
-  finish = int(input('Do you want to check? Type 1 for Yes 0 for No: '))#Asks the user if they're done
-  if (finish == 1):
-    if (computer == clckd):
-      bttn1.color("green")
-      bttn2.color("green")
-      bttn3.color("green")
-      bttn4.color("green")
-      bttn5.color("green")
-      bttn6.color("green")
-      bttn7.color("green")
-      bttn8.color("green")
-      bttn9.color("green")
-      print ("Congrats! You're good at remembering flashing colors!")
-    else:
-      bttn1.color("red")
-      bttn2.color("red")
-      bttn3.color("red")
-      bttn4.color("red")
-      bttn5.color("red")
-      bttn6.color("red")
-      bttn7.color("red")
-      bttn8.color("red")
-      bttn9.color("red")
-      print ("Try Again! You need to work on your memory!")
+  if (computer == clckd):
+    bttn1.color("green")
+    bttn2.color("green")
+    bttn3.color("green")
+    bttn4.color("green")
+    bttn5.color("green")
+    bttn6.color("green")
+    bttn7.color("green")
+    bttn8.color("green")
+    bttn9.color("green")
+    bttn1.stamp()
+    bttn1.hideturtle()
+    bttn2.stamp()
+    bttn2.hideturtle()
+    bttn3.stamp()
+    bttn3.hideturtle()
+    bttn4.stamp()
+    bttn4.hideturtle()
+    bttn5.stamp()
+    bttn5.hideturtle()
+    bttn6.stamp()
+    bttn6.hideturtle()
+    bttn7.stamp()
+    bttn7.hideturtle()
+    bttn8.stamp()
+    bttn8.hideturtle()
+    bttn9.stamp()
+    bttn9.hideturtle()
+    print ("Congrats! You're good at remembering flashing colors!")
+  else:
+    bttn1.color("red")
+    bttn2.color("red")
+    bttn3.color("red")
+    bttn4.color("red")
+    bttn5.color("red")
+    bttn6.color("red")
+    bttn7.color("red")
+    bttn8.color("red")
+    bttn9.color("red")
+    bttn1.stamp()
+    bttn1.hideturtle()
+    bttn2.stamp()
+    bttn2.hideturtle()
+    bttn3.stamp()
+    bttn3.hideturtle()
+    bttn4.stamp()
+    bttn4.hideturtle()
+    bttn5.stamp()
+    bttn5.hideturtle()
+    bttn6.stamp()
+    bttn6.hideturtle()
+    bttn7.stamp()
+    bttn7.hideturtle()
+    bttn8.stamp()
+    bttn8.hideturtle()
+    bttn9.stamp()
+    bttn9.hideturtle()
+    print ("Try Again! You need to work on your memory!")
+  done.hideturtle()
+  writer.clear()
+  done.penup()
+  done.goto(300,300)
+    
 
 done.onclick(printclckd)
-
-
 
 
 
